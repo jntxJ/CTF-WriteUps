@@ -6,10 +6,9 @@
 
 ---
 
-Nos dan un .MP3, lo ejecutamos, despues de un tiempo suena algun tipo de interferencia o frecuencia de radio, nos vamos metiendo presuntamente
-con morse.
-Abro el archivo en [Audacity](https://www.audacityteam.org/), lo dicho, vemos lo que podemos asociar (a morse) con puntos y guiones
-entre la cancion, empiezo a registrar los `.` y `-`
+Nos dan un .MP3, lo ejecutamos, hay un tipo de interferencia, presuntamente es [morse](https://en.wikipedia.org/wiki/Morse_code)
+
+Abro el archivo en [Audacity](https://www.audacityteam.org/), vemos que podemos asociar (a morse) los cambios de tono con `.` y `-` ya que hay intervalos mas largos, eso nos da la diferencia.
 
 ![alt text](https://github.com/jntxJ/CTF-WriteUps/blob/master/2018/X-MAS-CTF18/forensics/SantaSecurityLevels/Audacity.png)
 
@@ -17,7 +16,7 @@ Obtengo esto:
 
     --. .. - .... ..- -... -.-. --- -- --. --- --- --- --. .- .-.. -..- -- .- ...
 
-Al usar un traductor online, me convierte la cadena de `.` y `-` en esta frase
+Al usar un traductor morse online, obtengo esta frase
 
     githubcomgooogalxmas
 
