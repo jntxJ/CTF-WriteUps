@@ -6,7 +6,7 @@
 
 ---
 
-Nos dan un .MP3, lo ejecutamos, hay un tipo de interferencia, presuntamente es [morse](https://en.wikipedia.org/wiki/Morse_code)
+They give us a .MP3, we execute it, there is a type of interference, presumably it is [morse](https://en.wikipedia.org/wiki/Morse_code)
 
 Abro el archivo en [Audacity](https://www.audacityteam.org/), vemos que podemos asociar (a morse) los cambios de tono con `.` y `-` ya que hay intervalos mas largos, eso nos da la diferencia.
 
