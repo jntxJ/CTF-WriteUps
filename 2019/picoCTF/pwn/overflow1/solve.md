@@ -30,10 +30,9 @@ Con gdb, objdump, ida, etc... Con cualquiera podemos obtener la dirección.
 
 
 ```
-0x080485e0  frame_dummy
+gdb ./vuln
+info functions
 0x080485e6  flag
-0x0804865f  vuln
-0x0804869e  main
 ```
 
 
