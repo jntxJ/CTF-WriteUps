@@ -31,7 +31,7 @@ void flag() {
   ...
   fgets(buf,FLAGSIZE,f);
 ```
-- Algunos detalles de assembly antes de seguir.
+Algunos detalles de assembly antes de seguir.
 
 | register | architecture | descripcion |
 | :-------:| :----------: | :-----------|
