@@ -1,6 +1,6 @@
 Overflow1
 ============
-###### You beat the first overflow challenge. Now overflow the buffer and change the return address to the flag function in this [program](https://nodeca.github.io/pica/demo/) ? You can find it in /problems/overflow-1_1_e792baa0d29d24699530e6a26071a260 on the shell server. [Source](https://nodeca.github.io/pica/demo/).
+###### You beat the first overflow challenge. Now overflow the buffer and change the return address to the flag function in this [program](https://github.com/jntxJ/CTF-WriteUps/blob/master/2019/picoCTF/pwn/overflow1/vuln) ? You can find it in /problems/overflow-1_1_e792baa0d29d24699530e6a26071a260 on the shell server. [Source](https://github.com/jntxJ/CTF-WriteUps/blob/master/2019/picoCTF/pwn/overflow1/vuln.c).
 ---
 El ejercicio nos dice que debemos lograr cambiar la dirección de retorno y que nos lleve a la función `flag`.
 
@@ -20,7 +20,7 @@ Woah, were jumping to 0x8048705 !
 Simplemente nos pide un input y nos dice la instrucción a la que hemos saltado.
 Así que cuando logremos llegar a la función `flag`, supongo que nos mostrara la dirección.
 
-Source [vuln.c](https://nodeca.github.io/pica/demo/)
+Source [vuln.c](https://github.com/jntxJ/CTF-WriteUps/blob/master/2019/picoCTF/pwn/overflow1/vuln.c)
 
 ``` C
 #define BUFFSIZE 64
