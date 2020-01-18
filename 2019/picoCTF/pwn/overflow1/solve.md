@@ -119,7 +119,7 @@ Woah, were jumping to 0x8040008 !
 ##### Hemos cambiado el registro que direcciona!!
 
 Why do this :0?
-- Lo mismo que pasaba arriba con el registro `%ebp` pasa aca, asi que tenemos 4 bytes que debemos sumarle al buffer actual.
+- Sencillamente son los 4 bytes que ocupa la dirección de la función `flag` que estamos agregando despues de imprimir las `"A"`.
 ```
 $ python -c 'print "A"*76 + "\xe6\x85\x04\x08"' | ./vuln
 Give me a string and lets see what happens: 
