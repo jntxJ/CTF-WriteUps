@@ -33,12 +33,12 @@ void flag() {
 ```
 Algunos detalles de assembly antes de seguir.
 
-| register | architecture | descripcion |
+| registro | arquitectura | descripción |
 | :-------:| :----------: | :-----------|
 | eip      | 32 bits      | El registro que almacena la siguiente instrucción a la cual ir |
-| rip      | 64 bits      | <Instruction pointer register> |
+| rip      | 64 bits      | Instruction pointer register |
 | ebp      | 32 bits      | El registro que apunta a una ubicación fija dentro del marco de una función, así sera más fácil acceder a variables y argumentos |
-| rbp      | 64 bits      | <Base pointer register> |
+| rbp      | 64 bits      | Base pointer register |
 
 
 Siguiendo con el fuente, nos encontramos con un buffer de 64, haciendo la prueba de fuego.
@@ -60,7 +60,7 @@ Violación de segmento
 ```
 Obtenemos el overflow, bien.
 
-Saquemos la direccion en memoria de la funcion `flag`, con gdb, objdump, ida.. Usa el de preferencia.
+Saquemos la direccion en memoria de la función `flag`, con gdb, objdump, ida.. Usa el de preferencia.
 ```
 gdb ./vuln
 info functions
