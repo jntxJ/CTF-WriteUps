@@ -24,6 +24,7 @@ Empecemos con el escaneo de red, usaremos `nmap`, el cual nos dará información
 | -p-    | Escaneo de todos los puertos                       |
 | --open | Muestra solo los puertos abiertos                  |
 | -T4    | Agresividad con la que hace el escaneo (-T{1-5})   |
+| -oN    | Guardar el resultado en un archivo de texto        |
 
 ![nmapInitial](https://github.com/jntxJ/Writeups/blob/master/HTB/OpenAdmin/images/nmapInitial.png)
 
