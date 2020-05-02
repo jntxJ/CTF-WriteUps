@@ -80,6 +80,8 @@ Con [searchsploit](https://www.exploit-db.com/searchsploit#using) podemos indica
 | -x, --examine | Ver el contenido del exploit          |
 | -m, --mirror  | (aka copies) un exploit a nuestro entorno actual |
 
+### Exploitation
+
 ![exploitVi](https://github.com/jntxJ/Writeups/blob/master/HTB/OpenAdmin/images/exploitVim.png)
 
 Básicamente encontramos:
@@ -188,6 +190,9 @@ Listones
 ![usertxtandsudo](https://github.com/jntxJ/Writeups/blob/master/HTB/OpenAdmin/images/usertxt_sudoL_id.png)
 
 Inicialmente tenemos la flag **user.txt**.
+
+### Privilege Escalation
+
 También tenemos permisos como administrador a través del binario **/bin/nano** (que es un editor de texto) sobre el archivo **/opt/priv**, lo que quiere decir que todo lo que hagamos con ese archivo lo estaremos haciendo como root.
 
 ![sudobinnano](https://github.com/jntxJ/Writeups/blob/master/HTB/OpenAdmin/images/sudo_binNano_optPriv.png)
