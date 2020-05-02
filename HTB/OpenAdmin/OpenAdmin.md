@@ -1,7 +1,7 @@
 HTB - OpenAdmin
 ========================
 
-![openadmininfo](https://github.com/jntxJ/Writeups/tree/master/HTB/OpenAdmin/images)
+![openadmininfo](https://raw.githubusercontent.com/jntxJ/Writeups/master/HTB/OpenAdmin/images/infoopenadmin.PNG)
 
 Esta maquina es 90% de enumeracion, veamos cuales son los pasos que seguiremos
 
