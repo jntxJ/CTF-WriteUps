@@ -1,3 +1,4 @@
 # CTF-WriteUps
 
-Collection of CTF and machines of HackTheBox
+Collection ·
+CTF's and machines of HackTheBox
