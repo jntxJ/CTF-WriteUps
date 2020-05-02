@@ -1,7 +1,7 @@
 HTB - OpenAdmin
 ========================
 
-![openadmininfo](/images/info.png)
+![openadmininfo](/images/infoopenadmin.PNG)
 
 Esta maquina es 90% de enumeracion, veamos cuales son los pasos que seguiremos
 
