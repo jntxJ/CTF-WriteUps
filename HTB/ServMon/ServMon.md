@@ -37,6 +37,7 @@ Demosle al escaneo de servicios con los que cuenta el host.
 Usaremos una función de [S4vitar](https://www.youtube.com/channel/UCNHWpNqiM8yOQcHXtsluD7Q) mediante el cual extraeremos los puertos y con la herramienta xclip a nuestra clipboard, evitando tener que copiar todos los puertos uno a uno.
 
 extractPorts
+
 ![extractPorts](https://github.com/jntxJ/Writeups/blob/master/HTB/ServMon/images/extractPorts.PNG)
 
 ![outExtractPorts](https://github.com/jntxJ/Writeups/blob/master/HTB/ServMon/images/outExtractPorts.png)
@@ -137,9 +138,9 @@ Buscando por internet (y en el exploit nos lo dice), sabemos que el archivo nscl
 
 Pero resumidamente realizaremos estos pasos, ya que los pasos finales no son necesarios (reiniciar la maquina NO era necesario):
 1. Subir *nc.exe* (netcat) y el archivo *.bat* a Windows
-2. Subir el *.bat* al NSCLient++ como script con la API
+2. Subir el *.bat* al NSClient++ como script con la API
 3. Ponernos en escucha mediante nc (netcat), esperando la conexion del script
-4. Ejecutar el script con la ayuda la API
+4. Ejecutar el script con la ayuda de la API
 5. Conseguir la SHELL como Administrator
 
 #### 1. Subir *nc.exe* (netcat) y el archivo *.bat* a Windows
@@ -184,7 +185,7 @@ Ya se ve el comando `execute` y hace referencia a el script agregado.
 `"execute_url":"https://localhost:8443/api/v1/queries/queesesto/commands/execute"`
 
 #### 3. Ponernos en escucha mediante nc (netcat), esperando la conexion del script
-#### 4. Ejecutar el script con la ayuda la API
+#### 4. Ejecutar el script con la ayuda de la API
 
 Finalmente, por el puerto 443, que fue el que definimos en el *.bat* obtendremos la shell.
 
