@@ -37,7 +37,7 @@ Demosle al escaneo de servicios con los que cuenta el host.
 Usaremos una función de [S4vitar](https://www.youtube.com/channel/UCNHWpNqiM8yOQcHXtsluD7Q) mediante el cual extraeremos los puertos y con la herramienta xclip a nuestra clipboard, evitando tener que copiar todos los puertos uno a uno.
 
 extractPorts
-![extractPorts](https://github.com/jntxJ/Writeups/blob/master/HTB/ServMon/images/extractPorts.png)
+![extractPorts](https://github.com/jntxJ/Writeups/blob/master/HTB/ServMon/images/extractPorts.PNG)
 
 ![outExtractPorts](https://github.com/jntxJ/Writeups/blob/master/HTB/ServMon/images/outExtractPorts.png)
 
