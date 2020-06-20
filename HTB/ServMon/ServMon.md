@@ -143,7 +143,7 @@ Pero resumidamente realizaremos estos pasos, ya que los pasos finales no son nec
 4. Ejecutar el script con la ayuda de la API
 5. Conseguir la SHELL como Administrator
 
-#### 1. Subir *nc.exe* (netcat) y el archivo *.bat* a Windows
+### Subir *nc.exe* (netcat) y el archivo *.bat* a Windows
 
 Descargar el ejecutable de netcat desde la web y crear el *.bat*
 
@@ -151,7 +151,7 @@ Descargar el ejecutable de netcat desde la web y crear el *.bat*
 
 Usando `scp` podemos transferir mediante **ssh** archivos, siempre y cuando tengamos credenciales del objetivo.
 
-#### 2. Subir el *.bat* al NSCLient++ como script con la API
+### Subir el *.bat* al NSCLient++ como script con la API
 
 Buscar muy bien en la documentacion, entender y hacer, llevo su tiempo, pero fue bonito.
 
@@ -184,8 +184,8 @@ Al final vemos que se creo un tipo "JSON" con informacion relacionada a nuestro 
 Ya se ve el comando `execute` y hace referencia a el script agregado.
 `"execute_url":"https://localhost:8443/api/v1/queries/queesesto/commands/execute"`
 
-#### 3. Ponernos en escucha mediante nc (netcat), esperando la conexion del script
-#### 4. Ejecutar el script con la ayuda de la API
+### Ponernos en escucha mediante nc (netcat), esperando la conexion del script
+### Ejecutar el script con la ayuda de la API
 
 Finalmente, por el puerto 443, que fue el que definimos en el *.bat* obtendremos la shell.
 
@@ -193,7 +193,7 @@ Finalmente, por el puerto 443, que fue el que definimos en el *.bat* obtendremos
 
 ![ncOKAdmin](https://github.com/jntxJ/Writeups/blob/master/HTB/ServMon/images/ncOKAdmin.png)
 
-#### 5. Conseguir la SHELL como Administrator
+### Conseguir la SHELL como Administrator
 
 Y... Somos Administrator :)))))
 
@@ -201,6 +201,6 @@ Y... Somos Administrator :)))))
 
 ![last11charsAdmin](https://github.com/jntxJ/Writeups/blob/master/HTB/ServMon/images/last11charsAdmin.png)
 
-Buena maquina, en su momento estaba muy lenta y ademas las personas por seguir el exploit de internet al pie de la letra pues reseteaban la maquina, lo cual hacia peor el proceso. 
+Buena maquina, en su momento estaba muy lenta, pero también a causa de que algunas personas que realizarón el proceso de PrivEsc mediante el entorno grafico, no leían bien el exploit o yo que se, reseteaban la maquina (cuando en realidad lo que debían hacer era resetear el servicio NSClient++ con una opción en pantalla), entonces hacía peor el proceso. 
 
 Pero bueno, encantado y muchas gracias por leer.
