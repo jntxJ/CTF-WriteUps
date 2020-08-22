@@ -228,7 +228,9 @@ En las ultimas instrucciones se ve que ingresa a la base de datos un usuario lla
 
 ### Escalada de privilegios
 
-Revisando los permisos que tiene `theseus` me indica que no puede correr nada como `$ sudo`. Asi que mirando la info de los grupos relacionados encontre que esta en uno llamado **users**, me dio curiosidad así que si buscamos que archivos del sistema estan catalogados a ese grupo, vemos que solo hay uno, `/bin/sysinfo` (es un archivo que no habia visto antes y que mi sistema base no reconoce). Al ejecutarlo, exactamente trae info (alguna) del sistema. 
+Revisando los permisos que tiene `theseus` me indica que no puede correr nada como `$ sudo`. Asi que mirando la info de los grupos relacionados encontre que esta en uno llamado **users**, me dio curiosidad así que si buscamos que archivos del sistema estan catalogados a ese grupo, vemos que solo hay uno, `/bin/sysinfo` (es un archivo que no habia visto antes y que mi sistema base no reconoce). Al ejecutarlo, exactamente trae info (alguna) del sistema. Además viendo los permisos del archivo vemos que es un SUID, lo que significa que el usuario que lo ejecute, lo ejecutara con los permisos del owner (en este caso es **root**). 
+
+> Mas info de los SUID: https://www.ibiblio.org/pub/linux/docs/LuCaS/Manuales-LuCAS/doc-unixsec/unixsec-html/node56.html
 
 Para ver que hace por detras y como puede estar haciendolo se pueden usar varias herramientas (strace, ltrace, strings, cat). Yo mostraré con **strings** ya que se ve claro el vector de ataque.
 
