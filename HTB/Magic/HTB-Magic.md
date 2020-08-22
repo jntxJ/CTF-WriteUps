@@ -234,6 +234,8 @@ Para ver que hace por detras y como puede estar haciendolo se pueden usar varias
 
 ![rssysinfoid](https://github.com/jntxJ/Writeups/blob/master/HTB/Magic/images/rssysinfoid.png)
 
+`$ strings /bin/sysinfo`
+
 ![rssysinfostrings](https://github.com/jntxJ/Writeups/blob/master/HTB/Magic/images/rssysinfostrings.png)
 
 Como se ve esta ejecutando 4 instrucciones, entre ellas `$ fdisk` (ayuda a la gestion y administracion del espacio en el disco duro). Con 3 de esas aplicaciones puedo lograr la explotacion y escalada de privilegios, basicamente por que la tarea esta siendo llamada por el usuario `root`, asi que todas las tareas tendran ese plus. El metodo de explotacion se llama **path hijacking**.
