@@ -268,6 +268,8 @@ Perfectowow soy **root**, acá las flags :)
 
 ![rsroot](https://github.com/jntxJ/Writeups/blob/master/HTB/Magic/images/rsroot.png)
 
+![rsflags](https://github.com/jntxJ/Writeups/blob/master/HTB/Magic/images/rsflags.png)
+
 Es mi primera maquina **Medium** pero no se me dificulto tanto. Siguiendo el consejo de s4vitar, hay que darle a cualquier maquina, ya que nos podemos estar perdiendo de mucho aprendizaje, practicando, viendo videos y leyendo mucho he logrado avanzar mas de lo que tenia pensado. A darle duro, a romper todo (las maquinas tambien :P) 
 
 Muy buena maquina, me gusto mucho ademas de experimentar por primera vez con un secuestro de ruta. Encantado de poder brindarle algo de conocimiento a alguien, muchas gracias por querer aprender y no ponerte limites (:
