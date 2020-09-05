@@ -113,7 +113,7 @@ Y al intentar con este usuario si me permitio ingresar al dashboard
 
 Encontramos otro usuario (confirmamos el nickname **ssmith** en la imagen de los hash)
 
-![pageumbracousers](https://github.com/jntxJ/Writeups/blob/master/HTB/Remote/images/pageumbracosers.png)
+![pageumbracousers](https://github.com/jntxJ/Writeups/blob/master/HTB/Remote/images/pageumbracousers.png)
 
 'Listos, en este punto sabemos que estamos dentro de un CMS llamado Umbraco, lo siguente seria buscar la version y exploits con **searchsploit** o la web.
 
@@ -121,9 +121,9 @@ Encontramos otro usuario (confirmamos el nickname **ssmith** en la imagen de los
 
 El exploit encontrado -explota- dentro de la plataforma un archivo llamado `/umbraco/developer/Xslt/xsltVisualize.aspx` que tiene la posibilidad de darnos un RCE con el parametro **ctl00$body$xsltSelection**. Como POC el exploit ejecuta una calculadora, pero pa que queremos una calculadora jajaj, vamos a por una reverse shell. Revisando el codigo y algunas referencias en internet, lo que le indica el programa que se va a ejecutar en la cmd (claramente) es `proc.StartInfo.FileName = "calc.exe"`, pero esta funcion necesita (si queremos ejecutar otra herramienta diferente a la calculadora :P) llevar algo en `proc.StartInfo.Arguments = "whatever"`. 
 
-> Explica como `StartInfo.Arguments and StartInfo.FileName` trabaja: https://stackoverflow.com/questions/7160187/standardoutput-readtoend-hangs
-
 ![beautycsharp](https://github.com/jntxJ/Writeups/blob/master/HTB/Remote/images/beautycsharp.png) 
+
+> Acá se explica cómo `StartInfo.Arguments and StartInfo.FileName` trabaja: https://stackoverflow.com/questions/7160187/standardoutput-readtoend-hangs
 
 Como ejemplo realice un `ping` hacia la misma maquina a ver si me respondia.
 
