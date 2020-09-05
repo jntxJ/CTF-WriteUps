@@ -231,9 +231,9 @@ Listo, validando el contenido de `checks.txt` tenemos:
 
 Nuestro servicio **UsoSvc**
 
-![pscheckstxt1](https://github.com/jntxJ/Writeups/blob/master/HTB/Remote/images/psckeckstxt1.png) 
+![pscheckstxt1](https://github.com/jntxJ/Writeups/blob/master/HTB/Remote/images/pscheckstxt1.png) 
 
-![pscheckstxt2](https://github.com/jntxJ/Writeups/blob/master/HTB/Remote/images/psckeckstxt2.png) 
+![pscheckstxt2](https://github.com/jntxJ/Writeups/blob/master/HTB/Remote/images/pscheckstxt2.png) 
 
 Revisando este archivo no hay algo que resalte.
 
