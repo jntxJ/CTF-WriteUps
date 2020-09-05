@@ -7,7 +7,7 @@ HTB-Remote
 
 > Explico a veces a muy bajo nivel ya que me enfoco en la gente que esta super perdida en este mundo, además muestro errores que cometi o me extiendo por que si :P por si vez mucho texto ya sabes la razón
 
-### Enumeración 
+## Enumeración 
 
 Como es habitual, reviso que servicios esta corriendo la maquina, en este caso el escaneo va lento, asi que le agrego algunos para acelerar el proceso.
 
@@ -101,17 +101,19 @@ Encontramos hashes y dos posibles usuarios, vamos a **crackstation**, john, hash
 
 ![johncrackumbraco](https://github.com/jntxJ/Writeups/blob/master/HTB/Remote/images/johncrackumbraco.png) 
 
+## Explotación
+
 Listo, me fui para el **login** e intente hasta el desespero jajaj, pero no me servia, no entendia por que. Simplemente no estaba tomando todo el dominio del usuario `admin`, es la primera vez que me encuentro con estos poblemas y me gusta encontrarlo. Algunos proveedores o CMS usan el dominio junto al usuario como metodo para registro, por lo tanto al intentar ingresar con el usuario `admin` y la password no funciona. Como se ve en la imagen donde estan los hash, el usuario esta junto a un dominio.
 
 > `admin@htb.local`
 
 Y al intentar con este usuario si me permitio ingresar al dashboard
 
-![pageumbracodash](https://github.com/jntxJ/Writeups/blob/master/HTB/Remote/images/pageumbradodash.png)
+![pageumbracodash](https://github.com/jntxJ/Writeups/blob/master/HTB/Remote/images/pageumbracodash.png)
 
 Encontramos otro usuario (confirmamos el nickname **ssmith** en la imagen de los hash)
 
-![pageumbracousers](https://github.com/jntxJ/Writeups/blob/master/HTB/Remote/images/pageumbradosers.png)
+![pageumbracousers](https://github.com/jntxJ/Writeups/blob/master/HTB/Remote/images/pageumbracosers.png)
 
 'Listos, en este punto sabemos que estamos dentro de un CMS llamado Umbraco, lo siguente seria buscar la version y exploits con **searchsploit** o la web.
 
@@ -157,7 +159,7 @@ Ahora queda ejecutar una peticion con **nc.exe** hacia mi maquina pidiendole que
 
 Listos, adeeeeentro. A por la escalacion de privilegios.
 
-### Escalada de privilegios
+## Escalada de privilegios
 
 Revisando permisos con `> whoami /priv` me muestra esto
 
@@ -191,7 +193,7 @@ Revisé el foro oficial en HTB de la maquina a ver si la gente me hacia el favor
 
 Pues leyendo vi que hay dos maneras para explotar, una que relacionaban con TV (perfecto para no spoilear, ademas ya sabemos que significa) y otra (que llamaban U....c) que entendi solo cuando a alguien se le solto y no lo marcaron como spoiler. **Vamos a resolverla por los dos metodos :)**
 
-#### Método UsoSvc
+### Método UsoSvc
 
 Pues si, buscando informacion me encontre con que **UsoSvc** basicamente funciona como administrador de actualizaciones en windows
 
@@ -251,7 +253,7 @@ Las flags serían estas:
 
 Lo que vi con este metodo es que la conexion se pierde a los pocos segundos (ya te imaginas como consegui las flags :s) Ni siquiera sabria como buscar en internet si es un problema, un comando que necesito de más o incluso que la propia maquina es la que pueda estar terminando la peticion.
 
-#### Metodo TV (TeamViewer)
+### Metodo TV (TeamViewer)
 
 Bueno como comente arriba, en la enumeración se ve el directorio y sus componentes dentro de `Program Files (x86)`
 
