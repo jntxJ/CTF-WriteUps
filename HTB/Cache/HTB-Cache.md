@@ -9,7 +9,7 @@ Esta máquina nos presenta el uso del `VirtualHosting`, con el que nos encontrar
 
 > Como lo he dicho en otras maquinas, me gusta enfocarme en las personas que apenas estan iniciando en este universo paralelo. Por lo tanto si vez o mucho texto o que explico de más, pues ya sabes la razón, sin más, muchas gracias y a romper todo
 
-> Además te agrego que me he creado un [script en python](https://github.com/jntxJ/Writeups/blob/master/HTB/Cache/fileup2revsh.py) para automatizar la subida del archivo y obtención de la reverse shell, ta guapazo
+> Además te agrego que me he creado un [script en python](https://github.com/jntxJ/Writeups/blob/master/HTB/Cache/fileup2revsh.py) para automatizar la subida del archivo y genera la peticion para la obtención de la reverse shell, ta guapazo.
 
 ### Fases
 
@@ -80,15 +80,12 @@ Cuando queremos ingresar nos redirige a `/login.html`, pero igual podemos ver el
 
 ![pagenet](https://github.com/jntxJ/Writeups/blob/master/HTB/Cache/images/pagenet.png)
 
-Y acá vemos el redireccionamiento, pero nada más... Una imagen, que podríamos pensar en esteganografia como un método a ver si esconde algo (pero no, no hay nada, es todo una mentira e.e) Pues nada, acá me perdí completamente, no veía nada que resaltara... (díganme que también vieron algo poco usual en la imagen del `/login.html`, por que yo estuve estancado con el login por no ver eso)
+Y acá vemos el redireccionamiento, pero nada más... Una imagen, que podríamos pensar en esteganografia como un método a ver si esconde algo (pero no, no hay nada, es todo una mentira e.e) Pues nada, acá me perdí completamente, no veía nada que resaltara... 
 
-Bueno pues en la imagen nos muestra un script de `jquery` llamado `functionality.js` (si lo vieron?) Y si nos dirigimos a ver el script tenemos esto:
-
-![pagefunctionality](https://github.com/jntxJ/Writeups/blob/master/HTB/Cache/images/pagefunctionality.png)
-
-:O Vemos la validación de las credenciales, y si lo probamos pues nos lleva a `/net.html`. Así que tenemos credenciales (probablemente para usar en otro sitio), debemos seguir enumerando, ya que no hay nada que nos sirva en **/net.html**... Intentando conectarnos con estas credenciales por el servicio `SSH` no funciona :(
+Bueno pues en la imagen nos muestra un script de `jquery` llamado `functionality.js` y si vemos su contenido obtenemos una validación con unas credenciales probablemente para usar en otro sitio, debemos seguir enumerando, ya que no hay nada que nos sirva en **/net.html**... Intentando conectarnos con estas credenciales por el servicio `SSH` no funciona :(
 
 > username: ash
+
 > password: H@v3_fun
 
 También después de estar estancado sin saber hacia donde ver, alguien me hecho una manito diciéndome que el autor me quería decir algo. **(`author.html`)**
@@ -165,10 +162,13 @@ Bueno, empieza la locura :P
 
 En el mismo `.pdf` la mayoría de cosas hermosas a explotar las podemos hacer solo si estamos autenticados con algún usuario... Peero también tenemos algunos bypass authentication, entonces siguiendo uno de ellos (prueba y error) logramos obtener una vulnerabilidad SQLi Blind.
 
-> Info: https://portswigger.net/web-security/sql-injection/blind
-> Info: https://medium.com/@nyomanpradipta120/blind-sql-injection-ac36d2c4daab
-> Info: https://www.elladodelmal.com/2007/06/blind-sql-injection-i-de-en-mysql.html
-> s4vitar no puede faltar: https://www.youtube.com/watch?v=DpLGgFrHe3o&t=1864
+* Info: https://portswigger.net/web-security/sql-injection/blind
+
+* Info: https://medium.com/@nyomanpradipta120/blind-sql-injection-ac36d2c4daab
+
+* Info: https://www.elladodelmal.com/2007/06/blind-sql-injection-i-de-en-mysql.html
+
+* s4vitar no puede faltar: https://www.youtube.com/watch?v=DpLGgFrHe3o&t=1864
 
 Pues siguiendo el documento vemos que si hacemos una petición a alguna página que necesite autenticación, claramente nos debe salir un error o algo informándonos que no tenemos credenciales válidas.
 
@@ -263,11 +263,11 @@ Nos indica que va a guardar los archivos en `/public_html/sites/default/`, pero 
 
 > Remote Code Execution OpenEMR: https://labs.bishopfox.com/advisories/openemr-5-0-16-remote-code-execution-cross-site-scripting#Arbitrary
 
-![pageindexofsitesdef](https://github.com/jntxJ/Writeups/blob/master/HTB/Cache/images/pageindexofsitesdefault.png)
+![pageindexofsitesdef](https://github.com/jntxJ/Writeups/blob/master/HTB/Cache/images/pageindexsitesdef.png)
 
 Si seguimos el PoC, interceptamos la petición y modificamos su contenido, logramos subir el archivo... Intente cambiarle el nombre pero al parecer solo recibe **custom_pdf.php**, si revisamos de nuevo la página vemos en el apartado **Edit File**, que entre esos esta por default el archivo que queremos subir, así que debe hacer una validación en la que simplemente se puedan editar los archivos de esa lista. (no logre tomar screen a la lista, pero al menos vemos que sin haber subido aún el archivo (queda en ti creerme :P) aparece por default)
 
-![pagemanagesitepdf](https://github.com/jntxJ/Writeups/blob/master/HTB/Cache/images/pagemanagesitepdf.png)
+![pagemanagesitespdf](https://github.com/jntxJ/Writeups/blob/master/HTB/Cache/images/pagemanagesitespdf.png)
 
 Bueno, mucho texto y nada que explotamos esto e.e
 
